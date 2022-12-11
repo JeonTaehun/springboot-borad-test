@@ -1,0 +1,18 @@
+{{>layouts/header}}
+<form action="/articles/posts" method="post">
+    <div class="mb-3">
+        <label class="form-label">title</label>
+        <input type="text" class="form-control" name="title" placeholder="제목을 입력하세요.">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">content</label>
+        <textarea class="form-control" rows="3" name="content" placeholder="내용을 입력하세요."></textarea>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">userName</label>
+        <input type="text" class="form-control" name="userName" placeholder="닉네임을 입력하세요.">
+    </div>
+    <button class='btn btn-primary btn-sm mb-2' type="submit">제출</button>
+    <a class='btn btn-primary btn-sm mb-2' href="/articles">뒤로가기</a>
+</form>
+{{>layouts/footer}}

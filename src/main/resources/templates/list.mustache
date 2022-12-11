@@ -1,0 +1,22 @@
+{{>layouts/header}}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">글 번호</th>
+        <th scope="col">제목</th>
+        <th scope="col">닉네임</th>
+    </tr>
+    </thead>
+    <tbody class="table-group-divider">
+    {{#articles}}
+        <tr>
+            <th>{{id}}</th>
+            <td><a href="/articles/{{id}}">{{title}}</a></td>
+            <td>{{userName}}</td>
+        </tr>
+    {{/articles}}
+    </tbody>
+</table>
+<a class='btn btn-primary btn-sm mb-2' href="/articles/new">새 글 작성</a>
+<a class='btn btn-primary btn-sm mb-2' href="/articles">글 목록</a>
+{{>layouts/footer}}
